@@ -1,0 +1,66 @@
+[ 2016-05-01T00:58:02+08:00 ] 127.0.0.1 /shop/index.php/Home/Userinfo/showinfo
+ERR: Syntax Error in template "D:/2016XT/test02/shop/Home/View\Userinfo\showinfo.html"  on line 13 "table {border:1px solid #dddddd; border-collapse: collapse; width:100%; margin:auto;}"  - Unexpected ":", expected one of: "}" , " "
+
+[ 2016-05-01T01:29:51+08:00 ] 127.0.0.1 /shop/index.php/Home/Userinfo/showinfo
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'king' in 'where clause'
+
+[ 2016-05-01T01:32:50+08:00 ] 127.0.0.1 /shop/index.php/Home/Userinfo/showinfo
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'king' in 'where clause'
+
+[ 2016-05-01T01:32:57+08:00 ] 127.0.0.1 /shop/index.php/Home/Userinfo/showinfo
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'king' in 'where clause'
+
+[ 2016-05-01T13:16:11+08:00 ] 127.0.0.1 /shop/index.php/Home/Car/showcar
+ERR: Syntax Error in template "D:/2016XT/test02/shop/Home/View\Car\showcar.html"  on line 13 "table {border:1px solid #dddddd; border-collapse: collapse; width:100%; margin:auto;}"  - Unexpected ":", expected one of: "}" , " "
+
+[ 2016-05-01T13:27:28+08:00 ] 127.0.0.1 /shop/index.php/Home/Car/user.php?act=order_detail&order_id=20
+ERR: 非法操作:user.php
+
+[ 2016-05-01T16:36:06+08:00 ] 127.0.0.1 /shop/index.php/Home/Car/showcar
+ERR: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'field' in 'group statement'
+
+[ 2016-05-01T16:37:58+08:00 ] 127.0.0.1 /shop/index.php/Home/Car/showcar
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shop0811.car' doesn't exist
+
+[ 2016-05-01T17:46:11+08:00 ] 127.0.0.1 /shop/index.php/Home/Car/showcar
+ERR: Syntax Error in template "D:/2016XT/test02/shop/Home/View\Car\showcar.html"  on line 131 "{foreach }" missing "from" attribute
+
+[ 2016-05-01T17:46:12+08:00 ] 127.0.0.1 /shop/index.php/Home/Car/showcar
+ERR: Syntax Error in template "D:/2016XT/test02/shop/Home/View\Car\showcar.html"  on line 131 "{foreach }" missing "from" attribute
+
+[ 2016-05-01T17:50:06+08:00 ] 127.0.0.1 /shop/index.php/Home/Car/showcar
+ERR: Syntax Error in template "D:/2016XT/test02/shop/Home/View\Car\showcar.html"  on line 131 "{foreach }" missing "from" attribute
+
+[ 2016-05-01T17:50:07+08:00 ] 127.0.0.1 /shop/index.php/Home/Car/showcar
+ERR: Syntax Error in template "D:/2016XT/test02/shop/Home/View\Car\showcar.html"  on line 131 "{foreach }" missing "from" attribute
+
+[ 2016-05-01T17:50:45+08:00 ] 127.0.0.1 /shop/index.php/Home/Car/showcar
+ERR: Syntax Error in template "D:/2016XT/test02/shop/Home/View\Car\showcar.html"  on line 131 "{foreach}" missing "from" attribute
+
+[ 2016-05-01T17:50:46+08:00 ] 127.0.0.1 /shop/index.php/Home/Car/showcar
+ERR: Syntax Error in template "D:/2016XT/test02/shop/Home/View\Car\showcar.html"  on line 131 "{foreach}" missing "from" attribute
+
+[ 2016-05-01T17:59:14+08:00 ] 127.0.0.1 /shop/index.php/Home/Car/showcar
+ERR: Syntax Error in template "D:/2016XT/test02/shop/Home/View\Car\showcar.html"  on line 131 "{foreach}" missing "from" attribute
+
+[ 2016-05-01T17:59:14+08:00 ] 127.0.0.1 /shop/index.php/Home/Car/showcar
+ERR: Syntax Error in template "D:/2016XT/test02/shop/Home/View\Car\showcar.html"  on line 131 "{foreach}" missing "from" attribute
+
+[ 2016-05-01T18:02:42+08:00 ] 127.0.0.1 /shop/index.php/Home/Car/showcar
+ERR: Syntax Error in template "D:/2016XT/test02/shop/Home/View\Car\showcar.html"  on line 131 "{foreach}" missing "from" attribute
+
+[ 2016-05-01T18:02:42+08:00 ] 127.0.0.1 /shop/index.php/Home/Car/showcar
+ERR: Syntax Error in template "D:/2016XT/test02/shop/Home/View\Car\showcar.html"  on line 131 "{foreach}" missing "from" attribute
+
+[ 2016-05-01T19:16:48+08:00 ] 127.0.0.1 /shop/index.php/Home/Car/showcar
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0, 7' at line 1
+
+[ 2016-05-01T19:17:22+08:00 ] 127.0.0.1 /shop/index.php/Home/Car/showcar
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0, 7' at line 1
+
+[ 2016-05-01T19:17:24+08:00 ] 127.0.0.1 /shop/index.php/Home/Car/showcar
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0, 7' at line 1
+
+[ 2016-05-01T19:46:33+08:00 ] 127.0.0.1 /shop/index.php/Home/User/layout
+ERR: 非法操作:layout
+

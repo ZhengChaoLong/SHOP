@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta content="MSHTML 6.00.6000.16674" name="GENERATOR" />
+        <link href="{$smarty.const.ADMIN_CSS_URL}User_Login.css" type="text/css" rel="stylesheet" />
+        <title>用户登录</title>
+    </head>
+    <body id="userlogin_body">
+        
+<div class='contain'>
+<h1>管理员登陆页面</h1>
+                    <form action="{$smarty.const.__SELF__}" method="post">
+                        <ul>                                    
+                                        <li class="user">
+                                            <span class="user_main_text">用户名： </span>
+                                            <input class="TxtUserNameCssClass" id="admin_user" maxlength="20" name="admin_user"> </li></ul>
+                                            <span style="color:red;">{$username}</span>
+                                 
+                                        
+                                        <li>
+                                            <span class="user_main_text">密&nbsp;&nbsp;码： </span>
+                                            <input class="TxtPasswordCssClass" id="admin_psd" name="admin_psd" type="password">
+                                        </li>        
+                     
+                   
+                                    <li>
+                                        <span class="user_main_text">验证码：</span>
+                                        <input class="TxtValidateCodeCssClass" id="captcha" name="captcha" type="text">
+                                        <img src="{$smarty.const.__CONTROLLER__}/verifyImg" onclick="this.src='{$smarty.const.__CONTROLLER__}/verifyImg?'+Math.random()" alt="验证码" />
+                                        <span style="color:red;">{$captcha}</span>
+                                    </li> 
+                                    <li>
+                                        <input type="submit" name="submit" value="submit" class="submit">
+
+                                    </li>  
+                <ul>
+               
+        </form>
+
+    </div>
+                
+    </body>
+</html>

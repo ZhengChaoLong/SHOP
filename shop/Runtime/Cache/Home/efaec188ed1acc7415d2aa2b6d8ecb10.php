@@ -1,0 +1,1 @@
+<?php if (!defined('THINK_PATH')) exit();?>我是index控制器下面的index方法
