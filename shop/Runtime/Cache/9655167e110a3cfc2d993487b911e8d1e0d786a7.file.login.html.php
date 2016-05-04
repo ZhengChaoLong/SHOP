@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2016-05-01 00:52:43
+<?php /* Smarty version Smarty-3.1.6, created on 2016-05-03 22:06:40
          compiled from "D:/2016XT/test02/shop/Home/View\User\login.html" */ ?>
 <?php /*%%SmartyHeaderCode:127857206e5135c858-12910846%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9655167e110a3cfc2d993487b911e8d1e0d786a7' => 
     array (
       0 => 'D:/2016XT/test02/shop/Home/View\\User\\login.html',
-      1 => 1462035155,
+      1 => 1462284381,
       2 => 'file',
     ),
   ),
@@ -70,26 +70,20 @@ logo.gif">
             </div>
 
             <div id="mainNav" class="clearfix">
-                <a href="#" class="cur">首页<span></span></a>
-                <a href="#">GSM手机<span></span></a>
-                <a href="#">双模手机<span></span></a>
-                <a href="#">手机配件<span></span></a>
-                <a href="#">优惠活动<span></span></a>
-                <a href="#">留言板<span></span></a>
-
+                 <a href="<?php echo @__MODULE__;?>
+/Index/index" >首页<span></span></a>
+                 <a href="<?php echo @__MODULE__;?>
+/Userinfo/showinfo" >个人中心<span></span></a>
+                 <a href="<?php echo @__MODULE__;?>
+/Car/showcar" >购物车<span></span></a>
+                 <a href="<?php echo @__MODULE__;?>
+/User/login" class="cur">登录<span></span></a>
             </div>
         </div>
 
         <div class="header_bg">
             <div style="float: left; font-size: 14px; color:white; padding-left: 15px;">
             </div>  
-
-            <form id="searchForm" method="get" >
-                <input name="keywords" id="keyword" type="text" />
-                <input name="imageField" value=" " class="go" style="cursor: pointer; background: url('<?php echo @IMG_URL;?>
-sousuo.gif') no-repeat scroll 0% 0% transparent; width: 39px; height: 20px; border: medium none; float: left; margin-right: 15px; vertical-align: middle;" type="submit">
-
-            </form>
         </div>
         <div class="blank5"></div>
 

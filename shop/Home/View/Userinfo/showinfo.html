@@ -54,12 +54,10 @@
             </div>
 
             <div id="mainNav" class="clearfix">
-                <a href="#" class="cur">首页<span></span></a>
-                <a href="#">GSM手机<span></span></a>
-                <a href="#">双模手机<span></span></a>
-                <a href="#">手机配件<span></span></a>
-                <a href="#">优惠活动<span></span></a>
-                <a href="#">留言板<span></span></a>
+                <a href="{$smarty.const.__MODULE__}/Index/index" >首页<span></span></a>
+                <a href="{$smarty.const.__MODULE__}/Userinfo/showinfo" class="cur">个人中心<span></span></a>
+                <a href="{$smarty.const.__MODULE__}/Car/showcar">购物车<span></span></a>
+               
             </div>
         </div>
 
@@ -105,8 +103,8 @@
                         <div class="userCenterBox">
                             <div class="userMenu">
                                 
-                                <a href="#" class="curs"><img src="{$smarty.const.IMG_URL}u2.gif" alt="" /> 用户信息</a>
-                                <a href="#"><img src="{$smarty.const.IMG_URL}u3.gif" alt="" /> 我的购物车</a>
+                                <a href="{$smarty.const.__SELF__}" class="curs"><img src="{$smarty.const.IMG_URL}u2.gif" /> 用户信息</a>
+                                <a href="{$smarty.const.__MODULE__}/Car/showcar"><img src="{$smarty.const.IMG_URL}u3.gif" alt="" /> 我的购物车</a>
                                 
                                 <a href="#" style="background: none repeat scroll 0% 0% transparent; text-align: right; margin-right: 10px;"><img src="{$smarty.const.IMG_URL}bnt_sign.gif" alt="" /></a>
                             </div>      </div>
@@ -120,52 +118,106 @@
                         <div class="userCenterBox boxCenterList clearfix" style="">
                             <h5><span>我的个人中心</span></h5>
                             <div class="blank"></div>
+                            <form method="post" action='{$smarty.const.__CONTROLLER__}/changeinfo?usid={$info.user_id}'>
                             <table cellpadding="5" cellspacing="1">
                                 <tbody><tr>
                                         <td>我的用户名</td>
                                         <td>{$info.username}</td>
-                                        <td align='center'><a herf='#'>编辑</a></td>
                                     </tr>
                                     <tr>
                                         <td>我的邮箱</td>
                                         <td>{$info.user_email}</td>
-                                        <td align='center'><a herf='#'>编辑</a></td>
                                     </tr>
                                      <tr>
                                         <td>我的性别</td>
-                                        {if $info.user_sex eq '1'}
-                                        <td>男</td>
-                                        {elseif $info.user_sex eq '2'}
-                                        <td>女</td>
-                                        {else}
-                                        <td>保密</td>
-                                        {/if}
-                                        <td align='center'><a herf='#'>编辑</a></td>
+                                        <td>
+                                        
+                
+                                       
+                                            {if $info.user_sex eq '1'}
+                                            <input id="User_user_sex_0" value="1" checked="checked" type="radio" name="user_sex" /> 
+                                            <label for="User_user_sex_0">男</label>&nbsp;
+                                            <input id="User_user_sex_1" value="2" type="radio" name="user_sex" /> 
+                                            <label for="User_user_sex_1">女</label>&nbsp;
+                                            <input id="User_user_sex_2" value="3" type="radio" name="user_sex" /> 
+                                            <label for="User_user_sex_2">保密</label></span>   
+                                            {elseif $info.user_sex eq '2'}
+                                            <input id="User_user_sex_0" value="1" type="radio" name="user_sex" /> 
+                                            <label for="User_user_sex_0">男</label>&nbsp;
+                                            <input id="User_user_sex_1" value="2" checked="checked"  type="radio" name="user_sex" /> 
+                                            <label for="User_user_sex_1">女</label>&nbsp;
+                                            <input id="User_user_sex_2" value="3" type="radio" name="user_sex" /> 
+                                            <label for="User_user_sex_2">保密</label></span>   
+                                            {else}
+                                            <input id="User_user_sex_0" value="1"  type="radio" name="user_sex" /> 
+                                            <label for="User_user_sex_0">男</label>&nbsp;
+                                            <input id="User_user_sex_1" value="2" type="radio" name="user_sex" /> 
+                                            <label for="User_user_sex_1">女</label>&nbsp;
+                                            <input id="User_user_sex_2" value="3" checked="checked" type="radio" name="user_sex" /> 
+                                            <label for="User_user_sex_2">保密</label></span>   
+                                             {/if}
+                                        </td>
                                     </tr>
                                      <tr>
                                         <td>我的QQ</td>
-                                        <td>{$info.user_qq}</td>
-                                        <td align='center'><a herf='#'>编辑</a></td>
+                                        <td><input type='text' name='user_qq' value='{$info.user_qq}'></td>
+                                        
                                     </tr>
                                      <tr>
                                         <td>我的手机</td>
-                                        <td>{$info.user_tel}</td>
-                                        <td align='center'><a herf='#'>编辑</a></td>
+                                        <td><input type='text' name='user_tel' value='{$info.user_tel}'></td>
+                                       
                                     </tr>
                                      <tr>
                                         <td>我的学历</td>
-                                        {if $info.user_xueli eq '1'}
-                                        <td>未选择</td>
-                                        {elseif $info.user_xueli eq '2'}
-                                        <td>小学</td>
+                                        <td>
+                                        {if $info.user_xueli eq '2'}
+                                        <select name="user_xueli" id="user_xueli">
+                                                <option value="1">-请选择-</option>
+                                                <option value="2" selected="selected">小学</option>
+
+                                                <option value="3">初中</option>
+                                                <option value="4">高中</option>
+                                                <option value="5">大学</option>
+                                            </select> 
                                         {elseif $info.user_xueli eq '3'}
-                                        <td>初中</td>
+                                        <select name="user_xueli" id="user_xueli">
+                                                <option value="1">-请选择-</option>
+                                                <option value="2">小学</option>
+
+                                                <option value="3" selected="selected">初中</option>
+                                                <option value="4">高中</option>
+                                                <option value="5">大学</option>
+                                            </select> 
                                         {elseif $info.user_xueli eq '4'}
-                                        <td>高中</td>
+                                        <select name="user_xueli" id="user_xueli">
+                                                <option value="1">-请选择-</option>
+                                                <option value="2">小学</option>
+
+                                                <option value="3">初中</option>
+                                                <option value="4" selected="selected">高中</option>
+                                                <option value="5">大学</option>
+                                            </select> 
+                                        {elseif $info.user_xueli eq '5'}
+                                        <select name="user_xueli" id="user_xueli">
+                                                <option value="1">-请选择-</option>
+                                                <option value="2">小学</option>
+
+                                                <option value="3">初中</option>
+                                                <option value="4">高中</option>
+                                                <option value="5" selected="selected">大学</option>
+                                            </select> 
                                         {else}
-                                        <td>大学</td>
-                                        {/if}
-                                        <td align='center'><a herf='#'>编辑</a></td>
+                                            <select name="user_xueli" id="user_xueli">
+                                                <option value="1" selected="selected">-请选择-</option>
+                                                <option value="2">小学</option>
+
+                                                <option value="3">初中</option>
+                                                <option value="4">高中</option>
+                                                <option value="5">大学</option>
+                                            </select> 
+                                        {/if}                                                      
+                                        </td>
                                     </tr>
                                      <tr>
                                         <td>我的运动爱好</td>
@@ -179,21 +231,16 @@
                                             {if strpos($info.user_hobby,'2') gt -1}
                                                 排球{/if}
                                             {if strpos($info.user_hobby,'4') gt -1}
-                                                棒球 {/if}
+                                                棒球 {/if} 
                                           </td>                              
-                                        <td align='center'><a>编辑</a></td>
                                     </tr>
                                      <tr>
                                         <td>我的简介</td>
-                                        <td>{$info.user_introduce}</td>
-                                        <td align='center'><a>编辑</a></td>
+                                        <td><textarea name='user_introduce'>{$info.user_introduce}</textarea></td>
                                     </tr>
-                                </tbody></table>
-                            
-
-                
-                
-                            
+                                </tbody></table>  
+                                <input type='submit' value='修改'>  
+                            </form>
                         </div>
                     </div>
                 </div>

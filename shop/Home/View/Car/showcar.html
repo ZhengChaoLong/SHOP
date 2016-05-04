@@ -60,30 +60,9 @@
                 </div>
 
                 <div id="mainNav" class="clearfix">
-                    <a href="#" class="cur">
-                        首页
-                        <span></span>
-                    </a>
-                    <a href="#">
-                        GSM手机
-                        <span></span>
-                    </a>
-                    <a href="#">
-                        双模手机
-                        <span></span>
-                    </a>
-                    <a href="#">
-                        手机配件
-                        <span></span>
-                    </a>
-                    <a href="#">
-                        优惠活动
-                        <span></span>
-                    </a>
-                    <a href="#">
-                        留言板
-                        <span></span>
-                    </a>
+                      <a href="{$smarty.const.__MODULE__}/Index/index" >首页<span></span></a>
+                      <a href="{$smarty.const.__MODULE__}/Userinfo/showinfo" >个人中心<span></span></a>
+                      <a href="{$smarty.const.__MODULE__}/Car/showcar" class="cur">购物车<span></span></a>
                 </div>
             </div>
 
@@ -165,30 +144,28 @@
                                             <td>单价</td>
                                             <td>购买数量</td>
                                             <td>小计</td>
-                                            <td>商品类别</td>
                                             <td>操作</td>
                                         </tr>
-                                        {foreach from=$info item=val}
+                       {foreach from=$info item=val}
                                         <tr>
 
                                             <td align="center">{$val.goods_name}</td>
 
                                             <td align="center">￥{$val.goods_price}</td>
                                             <td align="center">
-                                                <span>
-
-                                                    <input type='number' class='control' value='1'></input>
-
-                                            </span>
+                   <span>
+                        <a href='{$smarty.const.__CONTROLLER__}/subnumber?id={$val.goods_id}' class='num'>-</a>
+                          <input type='text' class='control' value='{$val.number}'></input>
+                        <a href='{$smarty.const.__CONTROLLER__}/addnumber?id={$val.goods_id}' class='num'>+</a>
+                    </span>
                                         </td>
                                         <td align="center">
-                                            <span style='color:#FF3334;;font-weight: blod;'>￥1000</span>
+                                            <span style='color:#FF3334;;font-weight: blod;'>￥{$val.money}</span>
                                         </td>
-                                        <td align='center'>A</td>
-                                        <td align="center"> <font class="f6"><a href="#" >取消购买</a></font> 
+                                        <td align="center"> <font class="f6"><a href="{$smarty.const.__CONTROLLER__}/cancel?cid={$val.goods_id}" >取消购买</a></font> 
                                         </td>
                                     </tr>
-                                    {/foreach}
+                     {/foreach}
                                 </tbody>
                             </table>
                             <div class="blank5"></div>
@@ -198,7 +175,7 @@
                                 <div id="pager" class="pagebar">
                                     <span class="f_l " style="margin-right: 10px;">
                                         总计
-                                        <b>1000</b>
+                                        <b>{$sumMoney}</b>
                                         元
                                     </span>
 
@@ -211,4 +188,8 @@
             </div>
         </div>
 </body>
+    <<script language="text/javascript">
+
+    </script>
+
     </html>

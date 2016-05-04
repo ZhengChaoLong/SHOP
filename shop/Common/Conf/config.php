@@ -20,7 +20,7 @@ return array(
 	  		//'left_delimiter' => '<%%',
 	  		//'right_delimiter' => '%%>',
 	  ),
-
+/***数据库连接的配置**/
 
 	 'DB_TYPE'               =>  'mysql',     // 数据库类型
     'DB_HOST'               =>  'localhost', // 服务器地址
@@ -34,25 +34,13 @@ return array(
     'DB_FIELDS_CACHE'       =>  true,        // 启用字段缓存
     'DB_CHARSET'            =>  'utf8',      // 数据库编码默认采用utf8
 
+    	/***发邮件的配置***/
+    'MAIL_ADDRESS' => '15521215331@163.com',   // 发货人的email
+	'MAIL_FROM' => 'BLUCE超龙',      // 发货人姓名
+	'MAIL_SMTP' => 'smtp.163.com',      // 邮件服务器的地址
+	'MAIL_LOGINNAME' => '15521215331@163.com',   
+	'MAIL_PASSWORD' => 'zcl777',
+    
 
-    'THINK_EMAIL' => array(
-
-	'SMTP_HOST' => 'smtp.163.com', //SMTP服务器
-
-	'SMTP_PORT' => '465', //SMTP服务器端口
-
-	'SMTP_USER' => '15521215331@163.com', //SMTP服务器用户名
-
-	'SMTP_PASS' => 'zcl777', //SMTP服务器密码
-
-	'FROM_EMAIL' => '15521215331@163.com', //发件人EMAIL
-
-	'FROM_NAME' => 'BLUCE_king', //发件人名称
-
-	'REPLY_EMAIL' => '15521215331@163.com',
-	 //回复EMAIL（留空则为发件人EMAIL）
-
-	'REPLY_NAME' => '激活邮箱', //回复名称（留空则为发件人名称）
-
-	),
+	
 );

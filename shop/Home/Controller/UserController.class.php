@@ -25,6 +25,8 @@ class UserController extends Controller{
                     //$this ->redirect (地址分组/控制器/操作方法, 参数, 间隔时间, 提示信息)
                     session('username',$res['username']);
                     session('user_id',$res['user_id']);
+                    cookie('username',$res['username']);
+                    cookie('user_id',$res['user_id']);
                     $this ->redirect('Home/Index/index', array('username'=>$res['username']), 2, 'Login success');
                 }else{
                     $arr = array('username'=>'error','password'=>'error');
@@ -43,8 +45,11 @@ class UserController extends Controller{
             //$vrf = new Verify()
         
 		$this->display();
-		//$this->display('register');
+		
 	}
+
+
+
 //验证码校验
     function verifyImg(){
         $cfg=array(
@@ -76,25 +81,26 @@ class UserController extends Controller{
                 //验证成功，就会通过$data体现收集到的表单信息
                 //爱好的数组变为字符串
                 $data['user_hobby'] = implode(',',$data['user_hobby']);
-
-                // $mail='415873846@qq.com';
-                // $title='邮箱激活';
-                // $subject='';
-                // $content = '111111111';
-                // $attachment=null;
-                // think_send_mail($mail,$title,$subject,$content,$attachment);
-                
-
                 $z = $user -> add($data);
-                if($z)
-                    $this -> redirect('User/login');
+                $urlencode = md5($data['password']).htmlspecialchars($data['username']);
+    $content=<<<EOF
+        亲爱的{$username}您好~！感谢您注册我们网站<br/>
+        请点击此链接激活帐号即可登陆！<br/>
+        <a href="{}">{$urlencode}</a>
+        <br/>
+        如果点此链接无反映，可以将其复制到浏览器中来执行，链接的有效时间为24小时。      
+EOF;
+                if($z){
+                    sendMail($data['user_email'], '激活邮件', $content);
+                    $this -> redirect('User/login',array(),3,'register success! please looking your email !');
+                }
+                    
+                }
             }else{
                 //验证失败，输出查看错误信息
                 $this -> assign('errorInfo',$user->getError());
             }
-        }
-        $this -> display();
-		
+        $this->display();
 	}
 
 

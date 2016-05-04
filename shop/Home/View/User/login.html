@@ -40,25 +40,16 @@
             </div>
 
             <div id="mainNav" class="clearfix">
-                <a href="#" class="cur">首页<span></span></a>
-                <a href="#">GSM手机<span></span></a>
-                <a href="#">双模手机<span></span></a>
-                <a href="#">手机配件<span></span></a>
-                <a href="#">优惠活动<span></span></a>
-                <a href="#">留言板<span></span></a>
-
+                 <a href="{$smarty.const.__MODULE__}/Index/index" >首页<span></span></a>
+                 <a href="{$smarty.const.__MODULE__}/Userinfo/showinfo" >个人中心<span></span></a>
+                 <a href="{$smarty.const.__MODULE__}/Car/showcar" >购物车<span></span></a>
+                 <a href="{$smarty.const.__MODULE__}/User/login" class="cur">登录<span></span></a>
             </div>
         </div>
 
         <div class="header_bg">
             <div style="float: left; font-size: 14px; color:white; padding-left: 15px;">
             </div>  
-
-            <form id="searchForm" method="get" >
-                <input name="keywords" id="keyword" type="text" />
-                <input name="imageField" value=" " class="go" style="cursor: pointer; background: url('{$smarty.const.IMG_URL}sousuo.gif') no-repeat scroll 0% 0% transparent; width: 39px; height: 20px; border: medium none; float: left; margin-right: 15px; vertical-align: middle;" type="submit">
-
-            </form>
         </div>
         <div class="blank5"></div>
 

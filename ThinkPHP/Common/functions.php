@@ -1059,7 +1059,9 @@ function is_ssl() {
  * @param string $msg 重定向前的提示信息
  * @return void
  */
+
 function redirect($url, $time=0, $msg='') {
+    header("Content-type:text/html;charset=utf-8");
     //多行URL地址支持
     $url        = str_replace(array("\n", "\r"), '', $url);
     if (empty($msg))

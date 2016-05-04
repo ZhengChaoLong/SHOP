@@ -192,7 +192,6 @@ visibility:hidden;
  
    /*商品分类*/
    #category_tree{}
-
    #category_tree dl{margin:3px; border-bottom:1px dashed #ccc; padding:3px 0}
    #category_tree dt{height:22px; line-height:22px; font-size:14px; padding-left:10px;}
    #category_tree dt a{
@@ -744,4 +743,40 @@ visibility:hidden;
 .art_cat_box td{ border-bottom:1px solid #dbdbdb; font-weight:normal}
 .art_cat_box td a{ font-weight:bold; color:#3f3f3f; padding-left:20px; }
 
+.hezi{
+  border:1px solid #ccc;
+  box-shadow: 2px 2px 2px #CCC;
+}
 
+/**首页加入购物车样式**/
+#joincar{
+    display: block;
+    width: 80px;
+    height: 25px;
+    line-height: 25px;
+    color: #FFF;
+    border-color: #F40;
+    background: #F40;
+    margin:auto;
+}
+
+table .num{
+  display: inline-block;
+  text-decoration: none;
+  border: 1px solid #ccc;
+  width: 27px;
+  height:26px;
+  line-height: 26px;
+  text-align: center;
+  cursor: pointer;
+  background: rgb(237,237,237);
+
+}
+table .control{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #666;
+    border: 1px solid #CCC;
+    outline: 0;
+}

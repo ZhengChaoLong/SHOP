@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2016-05-01 13:09:22
+<?php /* Smarty version Smarty-3.1.6, created on 2016-05-03 22:56:01
          compiled from "D:/2016XT/test02/shop/Home/View\Userinfo\showinfo.html" */ ?>
 <?php /*%%SmartyHeaderCode:277185724e469291cb3-67822906%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '90660abd9e2ba060d51c615ad5e95b91492fd286' => 
     array (
       0 => 'D:/2016XT/test02/shop/Home/View\\Userinfo\\showinfo.html',
-      1 => 1462079358,
+      1 => 1462287150,
       2 => 'file',
     ),
   ),
@@ -95,12 +95,13 @@ logo.gif" /></a>
             </div>
 
             <div id="mainNav" class="clearfix">
-                <a href="#" class="cur">首页<span></span></a>
-                <a href="#">GSM手机<span></span></a>
-                <a href="#">双模手机<span></span></a>
-                <a href="#">手机配件<span></span></a>
-                <a href="#">优惠活动<span></span></a>
-                <a href="#">留言板<span></span></a>
+                <a href="<?php echo @__MODULE__;?>
+/Index/index" >首页<span></span></a>
+                <a href="<?php echo @__MODULE__;?>
+/Userinfo/showinfo" class="cur">个人中心<span></span></a>
+                <a href="<?php echo @__MODULE__;?>
+/Car/showcar">购物车<span></span></a>
+               
             </div>
         </div>
 
@@ -150,9 +151,11 @@ biao7.gif" alt="" /></a>
                         <div class="userCenterBox">
                             <div class="userMenu">
                                 
-                                <a href="#" class="curs"><img src="<?php echo @IMG_URL;?>
-u2.gif" alt="" /> 用户信息</a>
-                                <a href="#"><img src="<?php echo @IMG_URL;?>
+                                <a href="<?php echo @__SELF__;?>
+" class="curs"><img src="<?php echo @IMG_URL;?>
+u2.gif" /> 用户信息</a>
+                                <a href="<?php echo @__MODULE__;?>
+/Car/showcar"><img src="<?php echo @IMG_URL;?>
 u3.gif" alt="" /> 我的购物车</a>
                                 
                                 <a href="#" style="background: none repeat scroll 0% 0% transparent; text-align: right; margin-right: 10px;"><img src="<?php echo @IMG_URL;?>
@@ -168,56 +171,112 @@ bnt_sign.gif" alt="" /></a>
                         <div class="userCenterBox boxCenterList clearfix" style="">
                             <h5><span>我的个人中心</span></h5>
                             <div class="blank"></div>
+                            <form method="post" action='<?php echo @__CONTROLLER__;?>
+/changeinfo?usid=<?php echo $_smarty_tpl->tpl_vars['info']->value['user_id'];?>
+'>
                             <table cellpadding="5" cellspacing="1">
                                 <tbody><tr>
                                         <td>我的用户名</td>
                                         <td><?php echo $_smarty_tpl->tpl_vars['info']->value['username'];?>
 </td>
-                                        <td align='center'><a herf='#'>编辑</a></td>
                                     </tr>
                                     <tr>
                                         <td>我的邮箱</td>
                                         <td><?php echo $_smarty_tpl->tpl_vars['info']->value['user_email'];?>
 </td>
-                                        <td align='center'><a herf='#'>编辑</a></td>
                                     </tr>
                                      <tr>
                                         <td>我的性别</td>
-                                        <?php if ($_smarty_tpl->tpl_vars['info']->value['user_sex']=='1'){?>
-                                        <td>男</td>
-                                        <?php }elseif($_smarty_tpl->tpl_vars['info']->value['user_sex']=='2'){?>
-                                        <td>女</td>
-                                        <?php }else{ ?>
-                                        <td>保密</td>
-                                        <?php }?>
-                                        <td align='center'><a herf='#'>编辑</a></td>
+                                        <td>
+                                        
+                
+                                       
+                                            <?php if ($_smarty_tpl->tpl_vars['info']->value['user_sex']=='1'){?>
+                                            <input id="User_user_sex_0" value="1" checked="checked" type="radio" name="user_sex" /> 
+                                            <label for="User_user_sex_0">男</label>&nbsp;
+                                            <input id="User_user_sex_1" value="2" type="radio" name="user_sex" /> 
+                                            <label for="User_user_sex_1">女</label>&nbsp;
+                                            <input id="User_user_sex_2" value="3" type="radio" name="user_sex" /> 
+                                            <label for="User_user_sex_2">保密</label></span>   
+                                            <?php }elseif($_smarty_tpl->tpl_vars['info']->value['user_sex']=='2'){?>
+                                            <input id="User_user_sex_0" value="1" type="radio" name="user_sex" /> 
+                                            <label for="User_user_sex_0">男</label>&nbsp;
+                                            <input id="User_user_sex_1" value="2" checked="checked"  type="radio" name="user_sex" /> 
+                                            <label for="User_user_sex_1">女</label>&nbsp;
+                                            <input id="User_user_sex_2" value="3" type="radio" name="user_sex" /> 
+                                            <label for="User_user_sex_2">保密</label></span>   
+                                            <?php }else{ ?>
+                                            <input id="User_user_sex_0" value="1"  type="radio" name="user_sex" /> 
+                                            <label for="User_user_sex_0">男</label>&nbsp;
+                                            <input id="User_user_sex_1" value="2" type="radio" name="user_sex" /> 
+                                            <label for="User_user_sex_1">女</label>&nbsp;
+                                            <input id="User_user_sex_2" value="3" checked="checked" type="radio" name="user_sex" /> 
+                                            <label for="User_user_sex_2">保密</label></span>   
+                                             <?php }?>
+                                        </td>
                                     </tr>
                                      <tr>
                                         <td>我的QQ</td>
-                                        <td><?php echo $_smarty_tpl->tpl_vars['info']->value['user_qq'];?>
-</td>
-                                        <td align='center'><a herf='#'>编辑</a></td>
+                                        <td><input type='text' name='user_qq' value='<?php echo $_smarty_tpl->tpl_vars['info']->value['user_qq'];?>
+'></td>
+                                        
                                     </tr>
                                      <tr>
                                         <td>我的手机</td>
-                                        <td><?php echo $_smarty_tpl->tpl_vars['info']->value['user_tel'];?>
-</td>
-                                        <td align='center'><a herf='#'>编辑</a></td>
+                                        <td><input type='text' name='user_tel' value='<?php echo $_smarty_tpl->tpl_vars['info']->value['user_tel'];?>
+'></td>
+                                       
                                     </tr>
                                      <tr>
                                         <td>我的学历</td>
-                                        <?php if ($_smarty_tpl->tpl_vars['info']->value['user_xueli']=='1'){?>
-                                        <td>未选择</td>
-                                        <?php }elseif($_smarty_tpl->tpl_vars['info']->value['user_xueli']=='2'){?>
-                                        <td>小学</td>
+                                        <td>
+                                        <?php if ($_smarty_tpl->tpl_vars['info']->value['user_xueli']=='2'){?>
+                                        <select name="user_xueli" id="user_xueli">
+                                                <option value="1">-请选择-</option>
+                                                <option value="2" selected="selected">小学</option>
+
+                                                <option value="3">初中</option>
+                                                <option value="4">高中</option>
+                                                <option value="5">大学</option>
+                                            </select> 
                                         <?php }elseif($_smarty_tpl->tpl_vars['info']->value['user_xueli']=='3'){?>
-                                        <td>初中</td>
+                                        <select name="user_xueli" id="user_xueli">
+                                                <option value="1">-请选择-</option>
+                                                <option value="2">小学</option>
+
+                                                <option value="3" selected="selected">初中</option>
+                                                <option value="4">高中</option>
+                                                <option value="5">大学</option>
+                                            </select> 
                                         <?php }elseif($_smarty_tpl->tpl_vars['info']->value['user_xueli']=='4'){?>
-                                        <td>高中</td>
+                                        <select name="user_xueli" id="user_xueli">
+                                                <option value="1">-请选择-</option>
+                                                <option value="2">小学</option>
+
+                                                <option value="3">初中</option>
+                                                <option value="4" selected="selected">高中</option>
+                                                <option value="5">大学</option>
+                                            </select> 
+                                        <?php }elseif($_smarty_tpl->tpl_vars['info']->value['user_xueli']=='5'){?>
+                                        <select name="user_xueli" id="user_xueli">
+                                                <option value="1">-请选择-</option>
+                                                <option value="2">小学</option>
+
+                                                <option value="3">初中</option>
+                                                <option value="4">高中</option>
+                                                <option value="5" selected="selected">大学</option>
+                                            </select> 
                                         <?php }else{ ?>
-                                        <td>大学</td>
-                                        <?php }?>
-                                        <td align='center'><a herf='#'>编辑</a></td>
+                                            <select name="user_xueli" id="user_xueli">
+                                                <option value="1" selected="selected">-请选择-</option>
+                                                <option value="2">小学</option>
+
+                                                <option value="3">初中</option>
+                                                <option value="4">高中</option>
+                                                <option value="5">大学</option>
+                                            </select> 
+                                        <?php }?>                                                      
+                                        </td>
                                     </tr>
                                      <tr>
                                         <td>我的运动爱好</td>
@@ -231,22 +290,17 @@ bnt_sign.gif" alt="" /></a>
                                             <?php if (strpos($_smarty_tpl->tpl_vars['info']->value['user_hobby'],'2')>-1){?>
                                                 排球<?php }?>
                                             <?php if (strpos($_smarty_tpl->tpl_vars['info']->value['user_hobby'],'4')>-1){?>
-                                                棒球 <?php }?>
+                                                棒球 <?php }?> 
                                           </td>                              
-                                        <td align='center'><a>编辑</a></td>
                                     </tr>
                                      <tr>
                                         <td>我的简介</td>
-                                        <td><?php echo $_smarty_tpl->tpl_vars['info']->value['user_introduce'];?>
-</td>
-                                        <td align='center'><a>编辑</a></td>
+                                        <td><textarea name='user_introduce'><?php echo $_smarty_tpl->tpl_vars['info']->value['user_introduce'];?>
+</textarea></td>
                                     </tr>
-                                </tbody></table>
-                            
-
-                
-                
-                            
+                                </tbody></table>  
+                                <input type='submit' value='修改'>  
+                            </form>
                         </div>
                     </div>
                 </div>

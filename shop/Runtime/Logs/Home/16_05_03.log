@@ -1,0 +1,60 @@
+[ 2016-05-03T08:55:37+08:00 ] 127.0.0.1 /shop/index.php/Home/index/index?&page=2
+ERR: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'shop0811.sw_model\_category' doesn't exist
+
+[ 2016-05-03T09:30:16+08:00 ] 127.0.0.1 /shop/index.php/Home/index/index?&page=2
+ERR: Think\Model:findAll方法不存在！
+
+[ 2016-05-03T09:35:53+08:00 ] 127.0.0.1 /shop/index.php/Home/index/index?&page=2
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+
+[ 2016-05-03T09:35:53+08:00 ] 127.0.0.1 /shop/index.php/Home/index/index?&page=2
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+
+[ 2016-05-03T16:20:46+08:00 ] 127.0.0.1 /shop/index.php/Home/Index/index?pid=1
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'form sw_goods where goods_category_id=1 order by goods_id desc Limit 0, 8' at line 1
+
+[ 2016-05-03T16:21:54+08:00 ] 127.0.0.1 /shop/index.php/Home/Index/index?pid=1
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Limit 0, 8' at line 1
+
+[ 2016-05-03T16:22:41+08:00 ] 127.0.0.1 /shop/index.php/Home/Index/index?pid=1
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'form sw_goods order by goods_id desc Limit 0, 8' at line 1
+
+[ 2016-05-03T16:23:20+08:00 ] 127.0.0.1 /shop/index.php/Home/Index/index?pid=1
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'form sw_goods order by goods_id desc Limit 0, 8' at line 1
+
+[ 2016-05-03T16:24:03+08:00 ] 127.0.0.1 /shop/index.php/Home/Index/index?pid=1
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'form sw_goods order by goods_id desc Limit 0, 8' at line 1
+
+[ 2016-05-03T16:24:36+08:00 ] 127.0.0.1 /shop/index.php/Home/Index/index?pid=1
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'form sw_goods order by goods_id desc Limit 0, 8' at line 1
+
+[ 2016-05-03T16:25:05+08:00 ] 127.0.0.1 /shop/index.php/Home/Index/index?pid=1
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'form sw_goods order by goods_id desc Limit 0, 8' at line 1
+
+[ 2016-05-03T16:26:16+08:00 ] 127.0.0.1 /shop/index.php/Home/Index/index?pid=1
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'form sw_goods order by goods_id desc Limit 0, 8' at line 1
+
+[ 2016-05-03T16:28:01+08:00 ] 127.0.0.1 /shop/index.php/Home/Index/index?pid=1
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'form sw_goods order by goods_id desc Limit 0, 8' at line 1
+
+[ 2016-05-03T16:35:13+08:00 ] 127.0.0.1 /shop/index.php/Home/Index/index?pid=1
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'OR goods_category_id= order by goods_id desc Limit 0, 8' at line 1
+
+[ 2016-05-03T16:35:13+08:00 ] 127.0.0.1 /shop/index.php/Home/Index/index?pid=1
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'OR goods_category_id= order by goods_id desc Limit 0, 8' at line 1
+
+[ 2016-05-03T17:23:58+08:00 ] 127.0.0.1 /shop/index.php/Home/Index/joincat?goods_id=16
+ERR: Unable to load template file 'test02\ThinkPHP/Tpl/dispatch_jump.tpl'
+
+[ 2016-05-03T18:27:05+08:00 ] 127.0.0.1 /shop/index.php/Home/Car/showcar
+ERR: Syntax Error in template "D:/2016XT/test02/shop/Home/View\Car\showcar.html"  on line 165 "&lt;td align=&quot;center&quot;&gt; &lt;font class=&quot;f6&quot;&gt;&lt;a href=&quot;{$smarty.const__CONTROLLER__}/cancel?cid={$val.goods_id}&quot; &gt;取消购买&lt;/a&gt;&lt;/font&gt;" $smarty.const__CONTROLLER__ is invalid
+
+[ 2016-05-03T21:55:24+08:00 ] 127.0.0.1 /shop/index.php/Home/Userinfo/Index/index
+ERR: 非法操作:Index
+
+[ 2016-05-03T21:55:49+08:00 ] 127.0.0.1 /shop/index.php/Home/Userinfo/Index/index
+ERR: 非法操作:Index
+
+[ 2016-05-03T22:42:26+08:00 ] 127.0.0.1 /shop/index.php/Home/Userinfo/changeinfo?usid=2
+ERR: 非法操作:changeinfo
+

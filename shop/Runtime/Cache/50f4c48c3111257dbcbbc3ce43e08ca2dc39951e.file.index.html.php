@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2016-05-01 00:57:12
+<?php /* Smarty version Smarty-3.1.6, created on 2016-05-03 23:25:30
          compiled from "D:/2016XT/test02/shop/Home/View\Index\index.html" */ ?>
 <?php /*%%SmartyHeaderCode:1368572066345ee287-32350522%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '50f4c48c3111257dbcbbc3ce43e08ca2dc39951e' => 
     array (
       0 => 'D:/2016XT/test02/shop/Home/View\\Index\\index.html',
-      1 => 1462035425,
+      1 => 1462289126,
       2 => 'file',
     ),
   ),
@@ -24,6 +24,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'register' => 0,
     'userinfo' => 0,
     'layout' => 0,
+    'Category' => 0,
+    'v' => 0,
+    'val' => 0,
+    'info' => 0,
+    'pagelist' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -31,7 +36,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <html xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta name="Generator" content="YONGDA v1.0" />
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8 " />
         <meta name="Keywords" content="YONGDA商城" />
         <meta name="Description" content="YONGDA商城" />
         
@@ -77,12 +82,13 @@ logo.gif"></a>
                 </div>
             </div>
             <div id="mainNav" class="clearfix">
-                <a href="#" class="cur">首页<span></span></a>
-                <a href="#">GSM手机<span></span></a>
-                <a href="#">双模手机<span></span></a>
-                <a href="#">手机配件<span></span></a>
-                <a href="#">优惠活动<span></span></a>
-                <a href="#">留言板<span></span></a>
+                <a href="<?php echo @__CONTROLLER__;?>
+/index" class="cur">首页<span></span></a>
+                <a href="<?php echo @__MODULE__;?>
+/Userinfo/showinfo">个人中心<span></span></a>
+                <a href="<?php echo @__MODULE__;?>
+/Car/showcar">购物车<span></span></a>
+                
             </div>
         </div>
 
@@ -90,12 +96,6 @@ logo.gif"></a>
             <div style="float: left; font-size: 14px; color:white; padding-left: 15px;">
             </div>  
 
-            <form id="searchForm" method="get" action="#">
-                <input name="keywords" id="keyword" type="text" />
-                <input name="imageField" value=" " class="go" style="cursor: pointer; background: url('<?php echo @IMG_URL;?>
-sousuo.gif') no-repeat scroll 0% 0% transparent; width: 39px; height: 20px; border: medium none; float: left; margin-right: 15px; vertical-align: middle;" type="submit" />
-
-            </form>
         </div>
         <div class="blank5"></div>
         <div class="header_bg_b">
@@ -117,7 +117,7 @@ biao7.gif"></a>
         <div class="block box">
             <div class="blank"></div>
             <div id="ur_here">
-                当前位置: <a href="#">首页</a> <code>&gt;</code> 用户中心 
+            当前位置: <span>首页</span>
             </div>
         </div>
         <div class="blank"></div>
@@ -126,36 +126,37 @@ biao7.gif"></a>
         <div class="block clearfix">
 
             <div class="AreaL">
-
-                <h3><span>商品分类</span></h3> 
+            <h3><span>商品分类</span><a href='<?php echo @__CONTROLLER__;?>
+/index'>显示全部商品</a></h3> 
                 <div id="category_tree" class="box_1">
+                <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+ $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['Category']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
+$_smarty_tpl->tpl_vars['v']->_loop = true;
+ $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
+?>
                     <dl>
-                        <dt><a href="#">A类产品</a></dt>
-                        <dd>     
-                            <a href="#">CDMA手机</a>
-                            <a href="#">GSM手机</a>
-                            <a href="#">3G手机</a>
-                            <a href="#">双模手机</a>
-                        </dd>
+                        <dt><a href="<?php echo @__CONTROLLER__;?>
+/index?pid=<?php echo $_smarty_tpl->tpl_vars['v']->value['cat_id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['v']->value['cat_name'];?>
+</a></dt>       
+                                    <dd>     
+                                        <?php  $_smarty_tpl->tpl_vars['val'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['val']->_loop = false;
+ $_smarty_tpl->tpl_vars['key'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['v']->value['children']; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['val']->key => $_smarty_tpl->tpl_vars['val']->value){
+$_smarty_tpl->tpl_vars['val']->_loop = true;
+ $_smarty_tpl->tpl_vars['key']->value = $_smarty_tpl->tpl_vars['val']->key;
+?>
+                                            <a href="<?php echo @__CONTROLLER__;?>
+/index?pid=<?php echo $_smarty_tpl->tpl_vars['val']->value['cat_id'];?>
+"><?php echo $_smarty_tpl->tpl_vars['val']->value['cat_name'];?>
+</a>
+                                        <?php } ?>
+                                    </dd>                             
                     </dl>
-                    <dl>
-                        <dt><a href="#">B类产品</a></dt>
-                        <dd>     
-                            <a href="#">充电器</a>
-                            <a href="#">耳机</a>
-                            <a href="#">电池</a>
-                            <a href="#">读卡器和内存卡</a>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt><a href="#">C类产品</a></dt>
-                        <dd>     
-                            <a href="#">小灵通/固话充值卡</a>
-                            <a href="#">移动手机充值卡</a>
-                            <a href="#">联通手机充值卡</a>
-                        </dd>
-                    </dl>
-
+                <?php } ?>
                 </div>
                 
             </div>
@@ -164,137 +165,41 @@ biao7.gif"></a>
                 
                
 
-                <div class="itemTit" id="itemHot">
+               <!--  <div class="itemTit" id="itemHot">
                     <div class="tit">A类商品</div>
-                </div>
-                <div id="show_hot_area" class="clearfix">
-                    <div class="goodsItem">
-
-                        <a href="#"><img src="<?php echo @IMG_URL;?>
-9_thumb_G_1241511871555.jpg" alt="诺基亚E66" class="goodsimg"></a><br />
-                        <p class="f1"><a href="#" title="诺基亚E66">诺基亚E66</a></p>
-                        <font class="market">￥2758元</font><br />
-                        <font class="f1">
-                            ￥2298元                     </font>
-                    </div>
-                    <div class="goodsItem">
-
-                        <a href="#"><img src="<?php echo @IMG_URL;?>
-1_thumb_G_1240902890710.jpg" alt="KD876" class="goodsimg"></a><br />
-                        <p class="f1"><a href="#" title="KD876">KD876</a></p>
-                        <font class="market">￥1666元</font><br />
-                        <font class="f1">
-                            ￥1388元                     </font>
-                    </div>
-                    <div class="goodsItem">
-
-                        <a href="#"><img src="<?php echo @IMG_URL;?>
-8_thumb_G_1241425513488.jpg" alt="飞利浦9@9v" class="goodsimg"></a><br />
-                        <p class="f1"><a href="#" title="飞利浦9@9v">飞利浦9@9v</a></p>
-                        <font class="market">￥479元</font><br />
-                        <font class="f1">
-                            ￥399元                     </font>
-                    </div>
-                     <div class="goodsItem">
-
-                        <a href="#"><img src="<?php echo @IMG_URL;?>
-8_thumb_G_1241425513488.jpg" alt="飞利浦9@9v" class="goodsimg"></a><br />
-                        <p class="f1"><a href="#" title="飞利浦9@9v">飞利浦9@9v</a></p>
-                        <font class="market">￥479元</font><br />
-                        <font class="f1">
-                            ￥399元                     </font>
-                    </div>
-
-
-                </div>
+                </div> -->
             
-                <div class="itemTit" id="itemNew">
-                    <div class="tit">B类商品</div>
-                </div>
-                <div id="show_new_area" class="clearfix">
-                    <div class="goodsItem">
-
+                <div id="show_hot_area " class="clearfix ">
+                <?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+ $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['info']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
+$_smarty_tpl->tpl_vars['v']->_loop = true;
+ $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
+?>
+                    <div class="goodsItem hezi">
                         <a href="#"><img src="<?php echo @IMG_URL;?>
 9_thumb_G_1241511871555.jpg" alt="诺基亚E66" class="goodsimg"></a><br />
-                        <p class="f1"><a href="#" title="诺基亚E66">诺基亚E66</a></p>
-                        <font class="market">￥2758元</font><br />
-                        <font class="f1">
-                            ￥2298元                     </font>
+                        <p class="f1"><a href="#" class='f1'><?php echo $_smarty_tpl->tpl_vars['v']->value['goods_name'];?>
+</a></p>
+                        <font align='left'>商品库存量：<?php echo $_smarty_tpl->tpl_vars['v']->value['goods_number'];?>
+</font><br />
+                        <font class="f1"> ￥<?php echo $_smarty_tpl->tpl_vars['v']->value['goods_price'];?>
+元</font>
+                        <p><a href='<?php echo @__CONTROLLER__;?>
+/joincat?goods_id=<?php echo $_smarty_tpl->tpl_vars['v']->value['goods_id'];?>
+' class='f1' id='joincar'>加入购物车</a></p>
                     </div>
-                    <div class="goodsItem">
-
-                        <a href="#"><img src="<?php echo @IMG_URL;?>
-1_thumb_G_1240902890710.jpg" alt="KD876" class="goodsimg"></a><br />
-                        <p class="f1"><a href="#" title="KD876">KD876</a></p>
-                        <font class="market">￥1666元</font><br />
-                        <font class="f1">
-                            ￥1388元                     </font>
-                    </div>
-                    <div class="goodsItem">
-
-                        <a href="#"><img src="<?php echo @IMG_URL;?>
-8_thumb_G_1241425513488.jpg" alt="飞利浦9@9v" class="goodsimg"></a><br />
-                        <p class="f1"><a href="#" title="飞利浦9@9v">飞利浦9@9v</a></p>
-                        <font class="market">￥479元</font><br />
-                        <font class="f1">
-                            ￥399元                     </font>
-                    </div>
-                     <div class="goodsItem">
-
-                        <a href="#"><img src="<?php echo @IMG_URL;?>
-8_thumb_G_1241425513488.jpg" alt="飞利浦9@9v" class="goodsimg"></a><br />
-                        <p class="f1"><a href="#" title="飞利浦9@9v">飞利浦9@9v</a></p>
-                        <font class="market">￥479元</font><br />
-                        <font class="f1">
-                            ￥399元                     </font>
-                    </div>
+                <?php } ?>
                 </div>
-
-
-                 <div class="itemTit" id="itemNew">
-                    <div class="tit">C类商品</div>
-                </div>
-                <div id="show_new_area" class="clearfix">
-                    <div class="goodsItem">
-
-                        <a href="#"><img src="<?php echo @IMG_URL;?>
-9_thumb_G_1241511871555.jpg" alt="诺基亚E66" class="goodsimg"></a><br />
-                        <p class="f1"><a href="#" title="诺基亚E66">诺基亚E66</a></p>
-                        <font class="market">￥2758元</font><br />
-                        <font class="f1">
-                            ￥2298元                     </font>
-                    </div>
-                    <div class="goodsItem">
-
-                        <a href="#"><img src="<?php echo @IMG_URL;?>
-1_thumb_G_1240902890710.jpg" alt="KD876" class="goodsimg"></a><br />
-                        <p class="f1"><a href="#" title="KD876">KD876</a></p>
-                        <font class="market">￥1666元</font><br />
-                        <font class="f1">
-                            ￥1388元                     </font>
-                    </div>
-                    <div class="goodsItem">
-
-                        <a href="#"><img src="<?php echo @IMG_URL;?>
-8_thumb_G_1241425513488.jpg" alt="飞利浦9@9v" class="goodsimg"></a><br />
-                        <p class="f1"><a href="#" title="飞利浦9@9v">飞利浦9@9v</a></p>
-                        <font class="market">￥479元</font><br />
-                        <font class="f1">
-                            ￥399元                     </font>
-                    </div>
-                     <div class="goodsItem">
-
-                        <a href="#"><img src="<?php echo @IMG_URL;?>
-8_thumb_G_1241425513488.jpg" alt="飞利浦9@9v" class="goodsimg"></a><br />
-                        <p class="f1"><a href="#" title="飞利浦9@9v">飞利浦9@9v</a></p>
-                        <font class="market">￥479元</font><br />
-                        <font class="f1">
-                            ￥399元                     </font>
-                    </div>
-                </div>
-           
+                <p style='text-align: center;margin-top:5px;'><?php echo $_smarty_tpl->tpl_vars['pagelist']->value;?>
+</p>
+         
         </div>
         </div>
-       
+      
+
+
+
     </body>
 </html><?php }} ?>

@@ -6,7 +6,7 @@
 
 	calss IndexModel extends Model{
 
-
-		}
+			
+	}
 
 ?>

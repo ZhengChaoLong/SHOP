@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2016-04-29 16:39:08
+<?php /* Smarty version Smarty-3.1.6, created on 2016-05-03 22:08:05
          compiled from "D:/2016XT/test02/shop/Home/View\User\register.html" */ ?>
 <?php /*%%SmartyHeaderCode:171355720706f6aa510-70835384%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '136032f10f650b085b25b69f5a68a49af4ad5c9c' => 
     array (
       0 => 'D:/2016XT/test02/shop/Home/View\\User\\register.html',
-      1 => 1461919120,
+      1 => 1462284471,
       2 => 'file',
     ),
   ),
@@ -67,27 +67,20 @@ logo.gif"></a>
 
             </div>
             <div id="mainNav" class="clearfix">
-                <a href="#" class="cur">首页<span></span></a>
-                <a href="#">GSM手机<span></span></a>
-                <a href="#">双模手机<span></span></a>
-                <a href="#">手机配件<span></span></a>
-                <a href="#">优惠活动<span></span></a>
-
-                <a href="#">留言板<span></span></a>
+                <a href="<?php echo @__MODULE__;?>
+/Index/index" >首页<span></span></a>
+                 <a href="<?php echo @__MODULE__;?>
+/Userinfo/showinfo" >个人中心<span></span></a>
+                 <a href="<?php echo @__MODULE__;?>
+/Car/showcar" >购物车<span></span></a>
+                 <a href="<?php echo @__MODULE__;?>
+/User/register" class="cur">注册<span></span></a>
             </div>
         </div>
 
         <div class="header_bg">
             <div style="float: left; font-size: 14px; color:white; padding-left: 15px;">
             </div>  
-
-            <form id="searchForm" method="get" action="#">
-                <input name="keywords" id="keyword" type="text" />
-
-                <input name="imageField" value=" " class="go" style="cursor: pointer; background: url('<?php echo @IMG_URL;?>
-sousuo.gif') no-repeat scroll 0% 0% transparent; width: 39px; height: 20px; border: medium none; float: left; margin-right: 15px; vertical-align: middle;" type="submit" />
-
-            </form>
         </div>
         <div class="blank5"></div>
         <div class="header_bg_b">
