@@ -4,7 +4,7 @@
 namespace Home\Controller;
 use Think\Controller;  //注意这里的  use  不要写错了
 use Think\Verify;
-include_once(Common/Common/common.php);
+// include_once(Common/Common/common.php);
 
 class UserController extends Controller{
 
@@ -61,8 +61,11 @@ class UserController extends Controller{
         );
         
         $very = new \Think\Verify($cfg);
-        $very->entry();
+        ob_end_clean();  //解决验证码吗错误无法显示的问题
+        $very->entry(1);
 
+        // import("ORG.Util.Image");
+        // Image::buildImageVerify($cfg);
     }
 
 

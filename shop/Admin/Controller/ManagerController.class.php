@@ -39,6 +39,7 @@ class ManagerController extends Controller {
     	);
     	
         $very = new \Think\Verify($cfg);
+        ob_end_clean();
         $very->entry();
 
     }

@@ -34,7 +34,8 @@
 
         $this->assign('pagelist',$pagelist);
         $this->assign('info',$info);
-//返回购物车的总金额
+//返回购物车的总金额,和购物车里的商品件数；
+      
         $sumMoney = $car->sum('money');
         $this->assign('sumMoney',$sumMoney);
 

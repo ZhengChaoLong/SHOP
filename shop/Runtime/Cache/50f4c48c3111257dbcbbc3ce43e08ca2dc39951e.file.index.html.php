@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2016-05-03 23:25:30
+<?php /* Smarty version Smarty-3.1.6, created on 2016-05-04 21:00:44
          compiled from "D:/2016XT/test02/shop/Home/View\Index\index.html" */ ?>
 <?php /*%%SmartyHeaderCode:1368572066345ee287-32350522%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '50f4c48c3111257dbcbbc3ce43e08ca2dc39951e' => 
     array (
       0 => 'D:/2016XT/test02/shop/Home/View\\Index\\index.html',
-      1 => 1462289126,
+      1 => 1462366833,
       2 => 'file',
     ),
   ),
@@ -49,7 +49,7 @@ style.css" rel="stylesheet" type="text/css" />
     <body class="index_body">
         <div class="block clearfix" style="position: relative; height: 98px;">
             <a href="#" name="top"><img class="logo" src="<?php echo @IMG_URL;?>
-logo.gif"></a>
+360logo.png"></a>
 
             <div id="topNav" class="clearfix">
                 <div style="float: left;"> 
@@ -102,16 +102,7 @@ logo.gif"></a>
             <div class="f_l" style="padding-left: 10px;">
                 <img src="<?php echo @IMG_URL;?>
 biao6.gif" />
-                    <!-- 北京市区，现在下单(截至次日00:30已出库)，<b>明天上午(9-14点)</b>送达 <b>免运费火热进行中！</b> -->
-            </div>
-            <div class="f_r" style="padding-right: 10px;">
-                <img style="vertical-align: middle;" src="<?php echo @IMG_URL;?>
-biao3.gif">
-                    <span class="cart" id="ECS_CARTINFO">
-                        <a href="#" title="查看购物车">您的购物车中有 0 件商品，总计金额 ￥0.00元。</a></span>
-                    <a href="#"><img style="vertical-align: middle;" src="<?php echo @IMG_URL;?>
-biao7.gif"></a>
-
+                    大学城地区，现在下单(截至次日00:30已出库)，<b>明天上午(9-14点)</b>送达 <b>免运费火热进行中！</b>
             </div>
         </div>
         <div class="block box">
@@ -199,6 +190,93 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
         </div>
       
 
+
+<div id="mod-footer">
+		<div id="foot-bannerw">
+			<div class="bannerThree">
+				<div class="yuan">7</div>
+				<p>7天无理由退货</p>
+			</div>
+			<div class="bannerThree">
+				<div class="yuan">15</div>
+				<p>15天免费换货</p>
+			</div>
+			<div class="bannerThree">
+				<div class="yuan">包</div>
+				<p>满99元包邮</p>
+			</div>
+		</div>
+		<div id="foot-containerw">
+			<div id="lside">
+				<div class="five">
+					<dl>
+						<dt>新手入门</dt>
+						<dd><a href="#">新用户注册</a></dd>
+						<dd><a href="#">用户登录</a></dd>
+						<dd><a href="#">找回密码</a></dd>
+					</dl>
+				</div>
+				<div class="five">
+					<dl>
+						<dt>购物指南</dt>
+						<dd><a href="#">购物流程</a></dd>
+						<dd><a href="#">支付方式</a></dd>
+						<dd><a href="#">配送说明</a></dd>
+					</dl>
+				</div>
+				<div class="five">
+					<dl>
+						<dt>售后服务</dt>
+						<dd><a href="#">服务条款</a></dd>
+						<dd><a href="#">七日退货</a></dd>
+						<dd><a href="#">十五日换货</a></dd>
+					</dl>
+				</div>
+				<div class="five">
+					<dl>
+						<dt>免费试用</dt>
+						<dd><a href="#">试用流程</a></dd>
+						<dd><a href="#">查看申请结果</a></dd>
+						<dd><a href="#">提交报告</a></dd>
+					</dl>
+				</div>
+				<div class="five">
+					<dl>
+						<dt>推广合作</dt>
+						<dd><a href="#">厂商合作</a></dd>
+						<dd><a href="#">商品入驻</a></dd>
+						<dd><a href="#">企业采购</a></dd>
+						<dd><a href="#">360生态链</a></dd>
+					</dl>
+				</div>
+			</div>
+			<div id="rside">
+				<dl>
+					<dt>联系我们</dt>
+					<dd><p class="call-number">400-6822-360</p></dd>
+					<dd>周一到周日 8:00-22:00</dd>
+					<dd>(仅收市话费)</dd>
+					<dd>
+						<a href="#">
+							<img src="<?php echo @IMG_URL;?>
+serveronline.png" alt="">
+						</a>
+						<a href="#">
+							<img src="<?php echo @IMG_URL;?>
+WeChat.png" alt="">
+						</a>
+						<a href="#">
+							<img src="<?php echo @IMG_URL;?>
+webo.png" alt="">
+						</a>
+					</dd>
+				</dl>
+			</div>
+		</div>
+		<div id="footer-copyright">
+			360商城©2013-2016 360公司版权所有 京ICP备08010314号-43 京公网安备11000002000006号
+		</div>
+	</div>
 
 
     </body>
